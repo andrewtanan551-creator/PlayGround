@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#14251f" />
+  <title>Pine & Iron — Kemah di Ujung Musim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="app-shell">
+    <section id="title-screen" class="title-screen">
+      <div class="title-top"><span class="brand-mark">P<span>✦</span>I</span><span class="edition">CERITA INTERAKTIF · 01</span></div>
+      <div class="title-art" aria-hidden="true">
+        <div class="sun"></div><div class="ridge ridge-back"></div><div class="ridge ridge-front"></div>
+        <div class="lake"></div><div class="dock"></div><div class="tent tent-one"></div><div class="tent tent-two"></div>
+        <div class="pine pine-a"></div><div class="pine pine-b"></div><div class="pine pine-c"></div>
+        <div class="campfire"><i></i><b></b><span></span></div>
+        <div class="hero-person"><div class="hero-head"></div><div class="hero-body"></div><div class="hero-arm"></div></div>
+        <div class="art-label">HUTAN PINUS · MUSIM PANAS</div>
+      </div>
+      <div class="title-content">
+        <p class="eyebrow">SEBUAH CERITA TENTANG KEBERANIAN & KEDEKATAN</p>
+        <h1>Pine <em>&</em> Iron</h1>
+        <p class="title-sub">Kemah di Ujung Musim</p>
+        <p class="title-copy">Tiga hari di alam liar. Tiga pria dewasa yang tak mudah dibaca. Dan satu kesempatan untuk menemukan tempatmu di antara mereka.</p>
+        <button id="start-btn" class="button button-gold">MULAI PETUALANGAN <span>↗</span></button>
+        <p class="adult-note">Semua tokoh berusia 25 tahun ke atas · Romansa hangat, tanpa adegan eksplisit</p>
+      </div>
+      <div class="title-footer"><span>© PINE & IRON CAMP</span><span>INDONESIA · 2025</span></div>
+    </section>
+
+    <section id="game-screen" class="game-screen hidden">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="Pine and Iron">P<span>✦</span>I</a>
+        <div class="chapter-label"><span id="chapter-kicker">HARI 01 · PAGI</span><strong id="chapter-title">Kedatangan</strong></div>
+        <div class="top-actions"><button id="journal-btn" class="icon-button" aria-label="Buka jurnal">▤</button><button id="sound-btn" class="icon-button" aria-label="Suara">♫</button></div>
+      </header>
+      <div class="game-layout">
+        <section class="scene-panel" aria-label="Ilustrasi perkemahan">
+          <div class="scene-sky"><div class="scene-sun"></div><div class="scene-mountain m1"></div><div class="scene-mountain m2"></div><div class="scene-treeline"></div><div class="scene-water"></div><div class="scene-shore"></div>
+            <div class="scene-tent"><i></i></div><div class="scene-tree tree1"></div><div class="scene-tree tree2"></div><div class="scene-tree tree3"></div>
+            <div id="scene-character" class="scene-character character-rafi"><div class="char-head"><i class="hair"></i><i class="beard"></i></div><div class="char-neck"></div><div class="char-torso"><i class="strap"></i><i class="shirt-fold"></i></div><div class="char-arm left"></div><div class="char-arm right"></div><div class="char-waist"></div></div>
+            <div class="scene-caption"><span class="caption-dot"></span><span id="scene-caption-text">POS PENJAGAAN · DANAU PINUS</span></div>
+          </div>
+          <div class="scene-bottom"><span>✦</span> JANGAN TERBURU-BURU. DENGARKAN APA YANG TAK DIUCAPKAN.</div>
+        </section>
+        <section class="play-panel">
+          <div class="status-row"><div class="day-progress"><span class="mini-label">PERJALANAN</span><div class="progress-dots"><i class="active"></i><i></i><i></i></div></div><div class="weather"><span>☀</span> 24° <small>cerah</small></div></div>
+          <div id="content-area" class="content-area"></div>
+          <div id="character-strip" class="character-strip"></div>
+        </section>
+      </div>
+      <footer class="game-footer"><span>© PINE & IRON CAMP</span><button id="restart-btn">MULAI ULANG</button><span>HARI <b id="footer-day">01</b> / 03</span></footer>
+      <div id="modal-root"></div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
